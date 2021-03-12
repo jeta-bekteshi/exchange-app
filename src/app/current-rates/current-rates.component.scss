@@ -1,0 +1,23 @@
+.rates__conversion {
+
+  .input-container {
+    width: 80px;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template: 80px 1fr/ 95px 1fr;
+  }
+
+  &__switch {
+    margin: 20px 0;
+    cursor: pointer;
+    align-self: center;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

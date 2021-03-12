@@ -3,16 +3,41 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CurrentRatesComponent } from './current-rates/current-rates.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HistoricalRatesComponent } from './historical-rates/historical-rates.component';
+import { MatButtonModule } from '@angular/material/button';
+import { RatesTableComponent } from './rates-table/rates-table.component';
+import { MatInputModule } from '@angular/material/input';
+import { CurrencyOptionsComponent } from './currency-options/currency-options.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CurrentRatesComponent,
+    HistoricalRatesComponent,
+    RatesTableComponent,
+    CurrencyOptionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSnackBarModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

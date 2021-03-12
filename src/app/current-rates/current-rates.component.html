@@ -1,0 +1,48 @@
+<div class="rates" [formGroup]="convertCurrencyForm">
+  <!-- Conversion Container -->
+  <h2>Conversion</h2>
+  <div class="rates__header rates__conversion">
+    <div class="rates__conversion__fields">
+
+      <!-- Currency Amount -->
+      <div class="field-container">
+        <mat-form-field class="input-container">
+          <mat-label>Amount</mat-label>
+          <input matInput id="amount" type="number" formControlName="amount">
+        </mat-form-field>
+      </div>
+
+      <!-- From Currency -->
+      <div class="field-container">
+        <app-currency-options [label]="'From'"
+                              [selectedCurrency]="convertCurrencyForm.get('from').value"
+                              (selectedCurrencyEmitter)="changeFormControlCurrency('from', $event)"
+                              [currencies]="currencies"></app-currency-options>
+      </div>
+
+      <!-- Converted Amount -->
+      <div class="field-container">
+        <mat-form-field class="input-container">
+          <mat-label>Amount</mat-label>
+          <input matInput id="result" type="number" formControlName="result">
+        </mat-form-field>
+      </div>
+
+      <!-- To Currency -->
+      <div class="field-container">
+        <app-currency-options [label]="'To'"
+                              [selectedCurrency]="convertCurrencyForm.get('to').value"
+                              (selectedCurrencyEmitter)="changeFormControlCurrency('to', $event)"
+                              [currencies]="currencies"></app-currency-options>
+      </div>
+    </div>
+    <span class="rates__conversion__switch" (click)="switchCurrencies()">
+      <img src="assets/swap-vertical-circle-outline.png">
+    </span>
+
+  </div>
+  <!-- Current Rates Table -->
+  <h2>Current Rates</h2>
+  <b>Base:</b> {{convertCurrencyForm.get('from').value.name}}
+  <app-rates-table [rates]="rates"></app-rates-table>
+</div>

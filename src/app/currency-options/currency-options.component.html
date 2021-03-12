@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>{{label}}</mat-label>
+  <mat-select
+    [ngModel]="selectedCurrency"
+    (selectionChange)="changeSelectedCurrency($event)"
+    [compareWith]="compareCurrencyObjects">
+    <mat-option *ngFor="let currency of currencies" [value]="currency">{{currency.code}} ({{currency.name}})
+    </mat-option>
+  </mat-select>
+</mat-form-field>

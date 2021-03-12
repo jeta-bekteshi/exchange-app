@@ -1,0 +1,19 @@
+.table-container {
+  height: calc(100vh - 350px);
+  overflow: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+  .mat-table {
+    height: 300px;
+    width: 100%;
+
+    .mat-row:nth-child(odd) {
+      background: rgb(2, 66, 168, 0.1);
+    }
+
+    th {
+      font-size: 14px;
+    }
+  }
+}

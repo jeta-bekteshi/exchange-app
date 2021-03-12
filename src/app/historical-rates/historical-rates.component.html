@@ -1,0 +1,28 @@
+<div class="rates">
+  <!-- Options -->
+  <h4>Select base currency and date</h4>
+  <div class="rates__header">
+    <!-- Base Currency -->
+    <div class="field-container">
+      <app-currency-options [label]="'Base'" [selectedCurrency]="selectedCurrency"
+                            (selectedCurrencyEmitter)="changeSelectedCurrency($event)"
+                            [currencies]="currencies"></app-currency-options>
+    </div>
+    <!-- Date Options -->
+    <div class="field-container">
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <mat-select
+          [ngModel]="selectedOption"
+          (ngModelChange)="changeSelectedOption($event)"
+          ngDefaultControl>
+          <mat-option *ngFor="let option of options" [value]="option.date">{{option.text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <!-- Rates Table -->
+  <h2>Historical Rates</h2>
+  <app-rates-table [rates]="rates"></app-rates-table>
+</div>
