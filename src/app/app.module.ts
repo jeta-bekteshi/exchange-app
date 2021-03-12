@@ -11,10 +11,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistoricalRatesComponent } from './historical-rates/historical-rates.component';
 import { MatButtonModule } from '@angular/material/button';
-import { RatesTableComponent } from './rates-table/rates-table.component';
+import { RatesTableComponent } from './components/rates-table/rates-table.component';
 import { MatInputModule } from '@angular/material/input';
-import { CurrencyOptionsComponent } from './currency-options/currency-options.component';
+import { CurrencyOptionsComponent } from './components/currency-options/currency-options.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     MatButtonModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   bootstrap: [AppComponent]
 })

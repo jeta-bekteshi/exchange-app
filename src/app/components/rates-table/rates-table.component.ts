@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { CurrencyModel } from '../models/currency.model';
+import { CurrencyModel } from '../../models/currency.model';
 
 @Component({
   selector: 'app-rates-table',

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CurrencyModel } from '../models/currency.model';
+import { CurrencyModel } from '../../models/currency.model';
 import { MatSelectChange } from '@angular/material/select';
 
 @Component({
